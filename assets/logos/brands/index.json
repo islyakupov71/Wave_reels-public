@@ -1,0 +1,107 @@
+{
+ "1password": {
+  "license": "CC0-1.0",
+  "ru": "",
+  "source": "simple-icons"
+ },
+ "alibabadotcom": {
+  "license": "CC0-1.0",
+  "ru": "алибаба",
+  "source": "simple-icons"
+ },
+ "aliexpress": {
+  "license": "CC0-1.0",
+  "ru": "алиэкспресс",
+  "source": "simple-icons"
+ },
+ "alipay": {
+  "license": "CC0-1.0",
+  "ru": "алипей",
+  "source": "simple-icons"
+ },
+ "dhl": {
+  "license": "CC0-1.0",
+  "ru": "дхл",
+  "source": "simple-icons"
+ },
+ "ebay": {
+  "license": "CC0-1.0",
+  "ru": "ибей",
+  "source": "simple-icons"
+ },
+ "fedex": {
+  "license": "CC0-1.0",
+  "ru": "федекс",
+  "source": "simple-icons"
+ },
+ "googlemaps": {
+  "license": "CC0-1.0",
+  "ru": "гугл карты",
+  "source": "simple-icons"
+ },
+ "instagram": {
+  "license": "CC0-1.0",
+  "ru": "инстаграм",
+  "source": "simple-icons"
+ },
+ "mastercard": {
+  "license": "CC0-1.0",
+  "ru": "мастеркард",
+  "source": "simple-icons"
+ },
+ "paypal": {
+  "license": "CC0-1.0",
+  "ru": "пейпал",
+  "source": "simple-icons"
+ },
+ "shopify": {
+  "license": "CC0-1.0",
+  "ru": "шопифай",
+  "source": "simple-icons"
+ },
+ "telegram": {
+  "license": "CC0-1.0",
+  "ru": "телеграм",
+  "source": "simple-icons"
+ },
+ "tiktok": {
+  "license": "CC0-1.0",
+  "ru": "тикток",
+  "source": "simple-icons"
+ },
+ "ups": {
+  "license": "CC0-1.0",
+  "ru": "юпиэс",
+  "source": "simple-icons"
+ },
+ "visa": {
+  "license": "CC0-1.0",
+  "ru": "виза",
+  "source": "simple-icons"
+ },
+ "vk": {
+  "license": "CC0-1.0",
+  "ru": "вконтакте",
+  "source": "simple-icons"
+ },
+ "wechat": {
+  "license": "CC0-1.0",
+  "ru": "вичат",
+  "source": "simple-icons"
+ },
+ "whatsapp": {
+  "license": "CC0-1.0",
+  "ru": "вотсап",
+  "source": "simple-icons"
+ },
+ "yandexcloud": {
+  "license": "CC0-1.0",
+  "ru": "яндекс облако",
+  "source": "simple-icons"
+ },
+ "youtube": {
+  "license": "CC0-1.0",
+  "ru": "ютуб",
+  "source": "simple-icons"
+ }
+}

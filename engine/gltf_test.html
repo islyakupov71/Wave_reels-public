@@ -1,0 +1,85 @@
+<meta charset="utf-8">
+<style>html,body{margin:0;background:#04102E}canvas{display:block}</style>
+<script type="importmap">
+{"imports":{"three":"./vendor/three.module.min.js","three/addons/":"./vendor/"}}
+</script>
+<script type="module">
+import * as THREE from 'three';
+import {GLTFLoader} from './vendor/loaders/GLTFLoader.js';
+
+const W=540,H=540;
+const renderer=new THREE.WebGLRenderer({antialias:true,alpha:true,preserveDrawingBuffer:true});
+renderer.setPixelRatio(1); renderer.setSize(W,H);
+renderer.outputColorSpace=THREE.SRGBColorSpace;
+document.body.appendChild(renderer.domElement);
+
+const scene=new THREE.Scene();
+const cam=new THREE.PerspectiveCamera(28,1,0.1,100);
+cam.position.set(3.2,2.4,3.6); cam.lookAt(0,0,0);
+
+scene.add(new THREE.HemisphereLight(0xbfd4ff,0x0a1740,0.85));
+const key=new THREE.DirectionalLight(0xffffff,2.6); key.position.set(-3.5,5.5,3.2); scene.add(key);
+const rim=new THREE.DirectionalLight(0x6FE4FF,1.9); rim.position.set(4.5,1.2,-3.8); scene.add(rim);
+
+// бренд-палитра: перекрашиваем все материалы модели в градации синего по светлоте оригинала
+// рампа бренда от тёмного к светлому; акцент — для самой светлой доли модели
+const RAMP=['#06184F','#0A2B8C','#123FE0','#2A59FF','#5B84FF','#93B4FF'].map(h=>new THREE.Color(h));
+const ACCENT=new THREE.Color('#3FD0FF');
+function rampAt(u){                                   // u:0..1 -> цвет по рампе с интерполяцией
+  const x=Math.max(0,Math.min(0.999,u))*(RAMP.length-1);
+  const i=Math.floor(x);
+  return RAMP[i].clone().lerp(RAMP[i+1]||RAMP[i], x-i);
+}
+// Модели Kenney почти одноцветные — форму даёт свет, а не заливка.
+// Поэтому задаём единый цвет корпуса, и лишь если у модели ЕСТЬ реальный
+// разброс цветов, разводим их по светлоте вокруг корпуса.
+const BODY={dark:new THREE.Color('#4C79FF'), light:new THREE.Color('#0E37C8')};
+function brandify(root,opt={}){
+  const body=(BODY[opt.on||'dark']).clone();
+  const ls=[];
+  root.traverse(o=>{ if(o.isMesh) (Array.isArray(o.material)?o.material:[o.material])
+      .forEach(m=>ls.push(m.color?m.color.getHSL({}).l:0.5)); });
+  const lo=Math.min(...ls), hi=Math.max(...ls), span=hi-lo;
+  const multi=span>0.12;                        // у модели действительно несколько цветов
+  const cache=new Map();
+  root.traverse(o=>{
+    if(!o.isMesh) return;
+    o.castShadow=o.receiveShadow=false;
+    const mats=Array.isArray(o.material)?o.material:[o.material];
+    o.material=mats.map(m=>{
+      const l=m.color?m.color.getHSL({}).l:0.5;
+      const u=multi?(l-lo)/span:0.5;
+      const key=u.toFixed(2);
+      if(!cache.has(key)){
+        const hsl=body.getHSL({});
+        const col=(opt.accentTop&&multi&&u>0.92)
+          ? ACCENT.clone()
+          : new THREE.Color().setHSL(hsl.h, hsl.s, hsl.l*(0.74+u*0.52));  // ±26% светлоты
+        cache.set(key,new THREE.MeshStandardMaterial({
+          color:col, roughness:.46, metalness:.10, flatShading:false}));
+      }
+      return cache.get(key);
+    });
+    if(o.material.length===1) o.material=o.material[0];
+  });
+}
+function fit(root,size=2.0){
+  const box=new THREE.Box3().setFromObject(root), s=new THREE.Vector3(), c=new THREE.Vector3();
+  box.getSize(s); box.getCenter(c);
+  const k=size/Math.max(s.x,s.y,s.z);
+  root.scale.setScalar(k);
+  root.position.set(-c.x*k,-c.y*k,-c.z*k);
+}
+
+const holder=new THREE.Group(); scene.add(holder);
+let loaded=null;
+window.__load=(url)=>new Promise((res,rej)=>{
+  new GLTFLoader().load(url,g=>{
+    holder.clear();
+    brandify(g.scene,{accentTop:true}); fit(g.scene); holder.add(g.scene); loaded=g.scene;
+    res(true);
+  },undefined,e=>rej(String(e)));
+});
+window.__setRot=(rad)=>{ holder.rotation.y=rad; renderer.render(scene,cam); return true; };
+window.__ok=true;
+</script>

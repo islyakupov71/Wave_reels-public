@@ -1,0 +1,246 @@
+{
+ "truck": {
+  "path": "car-kit/Models/GLB format/truck.glb",
+  "ru": "фура / грузовик",
+  "pack": "car-kit"
+ },
+ "truck-flat": {
+  "path": "car-kit/Models/GLB format/truck-flat.glb",
+  "ru": "тягач без прицепа",
+  "pack": "car-kit"
+ },
+ "van": {
+  "path": "car-kit/Models/GLB format/van.glb",
+  "ru": "фургон",
+  "pack": "car-kit"
+ },
+ "delivery": {
+  "path": "car-kit/Models/GLB format/delivery.glb",
+  "ru": "курьерский фургон",
+  "pack": "car-kit"
+ },
+ "tractor-shovel": {
+  "path": "car-kit/Models/GLB format/tractor-shovel.glb",
+  "ru": "погрузчик",
+  "pack": "car-kit"
+ },
+ "wagon-blue": {
+  "path": "train-kit/Models/GLB format/train-carriage-container-blue.glb",
+  "ru": "ж/д вагон с контейнером",
+  "pack": "train-kit"
+ },
+ "wagon-box": {
+  "path": "train-kit/Models/GLB format/train-carriage-box.glb",
+  "ru": "крытый вагон",
+  "pack": "train-kit"
+ },
+ "wagon-flatbed": {
+  "path": "train-kit/Models/GLB format/train-carriage-flatbed.glb",
+  "ru": "платформа",
+  "pack": "train-kit"
+ },
+ "loco": {
+  "path": "train-kit/Models/GLB format/train-diesel-a.glb",
+  "ru": "локомотив",
+  "pack": "train-kit"
+ },
+ "rail": {
+  "path": "train-kit/Models/GLB format/railroad-straight.glb",
+  "ru": "рельсы",
+  "pack": "train-kit"
+ },
+ "ship-cargo": {
+  "path": "watercraft-kit/Models/GLB format/ship-cargo-a.glb",
+  "ru": "контейнеровоз",
+  "pack": "watercraft-kit"
+ },
+ "ship-cargo-b": {
+  "path": "watercraft-kit/Models/GLB format/ship-cargo-b.glb",
+  "ru": "сухогруз",
+  "pack": "watercraft-kit"
+ },
+ "tug": {
+  "path": "watercraft-kit/Models/GLB format/boat-tug-a.glb",
+  "ru": "буксир",
+  "pack": "watercraft-kit"
+ },
+ "container": {
+  "path": "watercraft-kit/Models/GLB format/cargo-container-a.glb",
+  "ru": "морской контейнер",
+  "pack": "watercraft-kit"
+ },
+ "container-b": {
+  "path": "watercraft-kit/Models/GLB format/cargo-container-b.glb",
+  "ru": "контейнер, вариант",
+  "pack": "watercraft-kit"
+ },
+ "cargo-pile": {
+  "path": "watercraft-kit/Models/GLB format/cargo-pile-a.glb",
+  "ru": "штабель груза",
+  "pack": "watercraft-kit"
+ },
+ "box-large": {
+  "path": "factory-kit/Models/GLB format/box-large.glb",
+  "ru": "короб большой",
+  "pack": "factory-kit"
+ },
+ "box-small": {
+  "path": "factory-kit/Models/GLB format/box-small.glb",
+  "ru": "короб малый",
+  "pack": "factory-kit"
+ },
+ "box-long": {
+  "path": "factory-kit/Models/GLB format/box-long.glb",
+  "ru": "короб длинный",
+  "pack": "factory-kit"
+ },
+ "box-wide": {
+  "path": "factory-kit/Models/GLB format/box-wide.glb",
+  "ru": "короб широкий",
+  "pack": "factory-kit"
+ },
+ "conveyor": {
+  "path": "factory-kit/Models/GLB format/conveyor-long.glb",
+  "ru": "конвейер",
+  "pack": "factory-kit"
+ },
+ "conveyor-turn": {
+  "path": "factory-kit/Models/GLB format/conveyor-corner.glb",
+  "ru": "конвейер, поворот",
+  "pack": "factory-kit"
+ },
+ "crane": {
+  "path": "factory-kit/Models/GLB format/crane.glb",
+  "ru": "кран",
+  "pack": "factory-kit"
+ },
+ "crane-lift": {
+  "path": "factory-kit/Models/GLB format/crane-lift.glb",
+  "ru": "кран-штабелёр",
+  "pack": "factory-kit"
+ },
+ "crane-magnet": {
+  "path": "factory-kit/Models/GLB format/crane-magnet.glb",
+  "ru": "кран с магнитом",
+  "pack": "factory-kit"
+ },
+ "robot-arm": {
+  "path": "factory-kit/Models/GLB format/robot-arm-a.glb",
+  "ru": "робот-манипулятор",
+  "pack": "factory-kit"
+ },
+ "scanner": {
+  "path": "factory-kit/Models/GLB format/scanner-high.glb",
+  "ru": "сканер / рамка",
+  "pack": "factory-kit"
+ },
+ "hopper": {
+  "path": "factory-kit/Models/GLB format/hopper-square.glb",
+  "ru": "бункер",
+  "pack": "factory-kit"
+ },
+ "gate": {
+  "path": "factory-kit/Models/GLB format/door-wide-open.glb",
+  "ru": "ворота дока",
+  "pack": "factory-kit"
+ },
+ "warehouse": {
+  "path": "factory-kit/Models/GLB format/structure-tall.glb",
+  "ru": "ангар / корпус",
+  "pack": "factory-kit"
+ },
+ "shelf-boxes": {
+  "path": "mini-market/Models/GLB format/shelf-boxes.glb",
+  "ru": "стеллаж с коробками",
+  "pack": "mini-market"
+ },
+ "shelf-bags": {
+  "path": "mini-market/Models/GLB format/shelf-bags.glb",
+  "ru": "стеллаж с мешками",
+  "pack": "mini-market"
+ },
+ "cart": {
+  "path": "mini-market/Models/GLB format/shopping-cart.glb",
+  "ru": "тележка",
+  "pack": "mini-market"
+ },
+ "basket": {
+  "path": "mini-market/Models/GLB format/shopping-basket.glb",
+  "ru": "корзина",
+  "pack": "mini-market"
+ },
+ "register": {
+  "path": "mini-market/Models/GLB format/cash-register.glb",
+  "ru": "касса / чек",
+  "pack": "mini-market"
+ },
+ "pvz": {
+  "path": "city-kit-commercial/Models/GLB format/building-a.glb",
+  "ru": "ПВЗ / магазин",
+  "pack": "city-kit-commercial"
+ },
+ "plant": {
+  "path": "city-kit-industrial/Models/GLB format/building-a.glb",
+  "ru": "промкорпус",
+  "pack": "city-kit-industrial"
+ },
+ "tank": {
+  "path": "city-kit-industrial/Models/GLB format/detail-tank.glb",
+  "ru": "резервуар",
+  "pack": "city-kit-industrial"
+ },
+ "arrow": {
+  "path": "factory-kit/Models/GLB format/arrow-rounded.glb",
+  "ru": "стрелка",
+  "pack": "factory-kit"
+ },
+ "arrow-flat": {
+  "path": "factory-kit/Models/GLB format/arrow-basic.glb",
+  "ru": "стрелка плоская",
+  "pack": "factory-kit"
+ },
+ "cog": {
+  "path": "factory-kit/Models/GLB format/cog-a.glb",
+  "ru": "шестерня",
+  "pack": "factory-kit"
+ },
+ "cog-b": {
+  "path": "factory-kit/Models/GLB format/cog-c.glb",
+  "ru": "шестерня, вариант",
+  "pack": "factory-kit"
+ },
+ "screen": {
+  "path": "factory-kit/Models/GLB format/screen-wide.glb",
+  "ru": "экран / дашборд",
+  "pack": "factory-kit"
+ },
+ "warning": {
+  "path": "factory-kit/Models/GLB format/warning-orange.glb",
+  "ru": "знак внимания",
+  "pack": "factory-kit"
+ },
+ "cone": {
+  "path": "factory-kit/Models/GLB format/cone.glb",
+  "ru": "конус / стоп",
+  "pack": "factory-kit"
+ },
+ "marker-cross": {
+  "path": "factory-kit/Models/GLB format/indicator-special-cross.glb",
+  "ru": "крест / отказ",
+  "pack": "factory-kit"
+ },
+ "marker-arrow": {
+  "path": "factory-kit/Models/GLB format/indicator-special-arrow.glb",
+  "ru": "указатель",
+  "pack": "factory-kit"
+ },
+ "plane": {
+  "path": "polypizza/plane-b.glb",
+  "ru": "грузовой самолёт",
+  "pack": "poly.pizza",
+  "license": "CC-BY",
+  "author": "dook",
+  "source": "https://poly.pizza/m/0ZVPPr6X6gM",
+  "credit": "3D-модель самолёта: dook / poly.pizza, CC-BY"
+ }
+}
